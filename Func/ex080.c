@@ -1,0 +1,32 @@
+#include<stdio.h>
+
+int tbl_gokei4(int* p);
+
+#define TBL_END 5
+
+main() {
+
+	int a[] = { 10,20,30,40,50 };
+	int gokei;
+
+	gokei = tbl_gokei4(a);
+
+	printf("gokei = %d\n", gokei);
+
+}
+tbl_gokei4(int* p) {
+
+	int i = 0, gokei = 0;
+
+	while (i < TBL_END) {
+
+		gokei += *p;
+
+		*p++;
+		i++;
+
+	}
+
+	return(gokei);
+
+}
